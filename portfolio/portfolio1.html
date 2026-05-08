@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0118">
+    <title>Tehreem Malik - Portfolio</title>
+    
+    <!-- Google Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-circle"></div>
+            <h1 class="loading-title">TEHREEM MALIK</h1>
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="scrollToTop()">TEHREEM</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" id="menu-icon"></i>
+                <i data-lucide="x" id="close-icon" style="display: none;"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#about" onclick="toggleMobileMenu()">About</a>
+            <a href="#education" onclick="toggleMobileMenu()">Education</a>
+            <a href="#skills" onclick="toggleMobileMenu()">Skills</a>
+            <a href="#projects" onclick="toggleMobileMenu()">Projects</a>
+            <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-mesh"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="status-badge">
+                    <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+                    OPEN TO OPPORTUNITIES
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">TEHREEM</span><br>
+                    MALIK
+                </h1>
+                <p class="hero-subtitle">Aspiring Software Developer</p>
+                <p class="hero-description">
+                    Passionate about creating beautiful web experiences and solving problems through code. 
+                    Ready to bring creativity and dedication to innovative projects.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span>View Projects</span>
+                    </a>
+                    <a id="download-cv-btn" href="Tehreem-Malik-CV.pdf" class="btn btn-secondary" download="Tehreem_Malik_CV.pdf" target="_blank" rel="noopener" type="application/pdf">
+                        <span>Download CV</span>
+                        <i data-lucide="download" style="width: 20px; height: 20px;"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>Karachi, Pakistan</span>
+                    </div>
+                    <div class="stat-item">
+                        <i data-lucide="code-2"></i>
+                        <span>Full Stack Development</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dot dot-red"></div>
+                        <div class="window-dot dot-yellow"></div>
+                        <div class="window-dot dot-green"></div>
+                    </div>
+                    <div class="code-content">
+                        <span class="code-line"><span class="code-keyword">const</span> developer = {</span>
+                        <span class="code-line">  name: <span class="code-string">"Tehreem Malik"</span>,</span>
+                        <span class="code-line">  role: <span class="code-string">"Software Developer"</span>,</span>
+                        <span class="code-line">  skills: [<span class="code-string">"Python"</span>, <span class="code-string">"JavaScript"</span>],</span>
+                        <span class="code-line">  passion: <span class="code-string">"Creating Impact"</span></span>
+                        <span class="code-line">};</span>
+                        <span class="code-line"></span>
+                        <span class="code-line"><span class="code-function">developer</span>.<span class="code-function">build</span>();</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section - NEW! -->
+    <section class="achievements">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Journey So Far</span>
+                <h2 class="section-title"><span class="gradient-text">Achievements</span></h2>
+                <p class="section-description">
+                    My journey in tech, captured in numbers
+                </p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <span class="achievement-number" data-target="15">0</span>
+                    <p class="achievement-label">Projects Completed</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <span class="achievement-number" data-target="8">0</span>
+                    <p class="achievement-label">Technologies Mastered</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <span class="achievement-number" data-target="100">0</span>
+                    <p class="achievement-label">% Dedication</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <span class="achievement-number" data-target="2024">0</span>
+                    <p class="achievement-label">Year Started</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Who I Am</span>
+                <h2 class="section-title"><span class="gradient-text">About Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a motivated and detail-oriented aspiring software developer with a strong foundation 
+                            in web development and programming. My journey in tech is driven by curiosity and a 
+                            passion for creating meaningful digital experiences.
+                        </p>
+                        <p>
+                            With hands-on experience in Python, HTML, CSS, and JavaScript, I've developed various 
+                            academic and self-initiated projects that showcase my problem-solving abilities and 
+                            dedication to continuous learning.
+                        </p>
+                        <p>
+                            I'm particularly interested in modern AI technologies and cloud platforms, and I'm 
+                            eager to contribute to innovative projects while growing professionally in a dynamic 
+                            team environment.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <h3>Problem Solver</h3>
+                        <p>Logical thinking and analytical approach to challenges</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Team Player</h3>
+                        <p>Strong communication and collaboration skills</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Quick Learner</h3>
+                        <p>Adaptable and eager to embrace new technologies</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <h3>Passionate</h3>
+                        <p>Dedicated to creating impactful solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Academic Background</span>
+                <h2 class="section-title"><span class="gradient-text">Education</span></h2>
+            </div>
+            <div class="education-timeline">
+                <div class="timeline-line"></div>
+                <div class="education-item">
+                    <div class="timeline-dot">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-header">
+                            <h3 class="education-degree">Bachelor's Degree</h3>
+                            <span class="education-status status-progress">In Progress</span>
+                        </div>
+                        <p class="education-institution">Iqra University</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="timeline-dot">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-header">
+                            <h3 class="education-degree">Matriculation</h3>
+                            <span class="education-status status-completed">Completed 2022</span>
+                        </div>
+                        <p class="education-institution">FG Minwalla Girls School, Federal Board</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">What I Know</span>
+                <h2 class="section-title"><span class="gradient-text">Skills & Expertise</span></h2>
+                <p class="section-description">
+                    A focused toolkit across development, design, AI workflows, and team collaboration.
+                </p>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-item" style="--progress: 85%; --accent: #ff87b4; --accent-soft: rgba(255, 135, 180, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-brands fa-html5"></i></span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <h3 class="skill-name">HTML</h3>
+                    <p class="skill-meta">Semantic Frontend</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 80%; --accent: #8fd7ff; --accent-soft: rgba(143, 215, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-brands fa-css3-alt"></i></span>
+                        <span class="skill-level">80%</span>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                    <p class="skill-meta">Responsive Styling</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 75%; --accent: #caa8ff; --accent-soft: rgba(202, 168, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-brands fa-bootstrap"></i></span>
+                        <span class="skill-level">75%</span>
+                    </div>
+                    <h3 class="skill-name">Bootstrap</h3>
+                    <p class="skill-meta">UI Framework</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 70%; --accent: #ffd27d; --accent-soft: rgba(255, 210, 125, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-brands fa-js"></i></span>
+                        <span class="skill-level">70%</span>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <p class="skill-meta">Interactive UI</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 80%; --accent: #9cc4ff; --accent-soft: rgba(156, 196, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-brands fa-python"></i></span>
+                        <span class="skill-level">80%</span>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <p class="skill-meta">Programming Logic</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 75%; --accent: #ff9e7d; --accent-soft: rgba(255, 158, 125, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-brands fa-git-alt"></i></span>
+                        <span class="skill-level">75%</span>
+                    </div>
+                    <h3 class="skill-name">Git</h3>
+                    <p class="skill-meta">Version Control</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 85%; --accent: #ff9ec9; --accent-soft: rgba(255, 158, 201, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <h3 class="skill-name">Canva</h3>
+                    <p class="skill-meta">Visual Design</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 70%; --accent: #9fe3ff; --accent-soft: rgba(159, 227, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-image"></i></span>
+                        <span class="skill-level">70%</span>
+                    </div>
+                    <h3 class="skill-name">Adobe Photoshop</h3>
+                    <p class="skill-meta">Creative Editing</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 65%; --accent: #d8b3ff; --accent-soft: rgba(216, 179, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-brain"></i></span>
+                        <span class="skill-level">65%</span>
+                    </div>
+                    <h3 class="skill-name">AI/ML Concepts</h3>
+                    <p class="skill-meta">Emerging Tech</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 80%; --accent: #ff87a4; --accent-soft: rgba(255, 135, 164, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                        <span class="skill-level">80%</span>
+                    </div>
+                    <h3 class="skill-name">Prompt Engineering</h3>
+                    <p class="skill-meta">AI Workflow Design</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 70%; --accent: #81d8ff; --accent-soft: rgba(129, 216, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-cloud"></i></span>
+                        <span class="skill-level">70%</span>
+                    </div>
+                    <h3 class="skill-name">Cloud Platforms</h3>
+                    <p class="skill-meta">Deployment Basics</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 75%; --accent: #bba3ff; --accent-soft: rgba(187, 163, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-robot"></i></span>
+                        <span class="skill-level">75%</span>
+                    </div>
+                    <h3 class="skill-name">GitHub Copilot</h3>
+                    <p class="skill-meta">Developer Productivity</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 90%; --accent: #ff8ea9; --accent-soft: rgba(255, 142, 169, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-comments"></i></span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <h3 class="skill-name">Communication</h3>
+                    <p class="skill-meta">Clear Collaboration</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 85%; --accent: #92cdff; --accent-soft: rgba(146, 205, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-people-group"></i></span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <h3 class="skill-name">Teamwork</h3>
+                    <p class="skill-meta">Cross-Team Support</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 85%; --accent: #ffc987; --accent-soft: rgba(255, 201, 135, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-lightbulb"></i></span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <h3 class="skill-name">Problem Solving</h3>
+                    <p class="skill-meta">Analytical Thinking</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+
+                <article class="skill-item" style="--progress: 80%; --accent: #c8a8ff; --accent-soft: rgba(200, 168, 255, 0.18);">
+                    <div class="skill-top">
+                        <span class="skill-icon"><i class="fa-solid fa-diagram-project"></i></span>
+                        <span class="skill-level">80%</span>
+                    </div>
+                    <h3 class="skill-name">Logical Thinking</h3>
+                    <p class="skill-meta">Structured Decisions</p>
+                    <div class="skill-bar"><div class="skill-progress"></div></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">My Work</span>
+                <h2 class="section-title"><span class="gradient-text">Projects</span></h2>
+                <p class="section-description">
+                    Academic and self-initiated projects showcasing my skills and passion for development
+                </p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">01</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <h3 class="project-title">Python Applications</h3>
+                        <p class="project-description">
+                            Built various Python-based applications to strengthen programming fundamentals and problem-solving skills.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Problem Solving</span>
+                            <span class="project-tag">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">02</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <h3 class="project-title">Responsive Web Pages</h3>
+                        <p class="project-description">
+                            Designed and developed responsive web pages using HTML, CSS3, and Bootstrap with modern design principles.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">03</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3 class="project-title">Interactive Web Apps</h3>
+                        <p class="project-description">
+                            Created interactive web applications with JavaScript to enhance user experience and implement dynamic features.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Web Development</span>
+                            <span class="project-tag">UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Let's Connect</span>
+                <h2 class="section-title"><span class="gradient-text">Get In Touch</span></h2>
+                <p class="section-description">
+                    I'm currently seeking opportunities to start my professional journey. Let's connect!
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Contact Information</h3>
+                        <div class="contact-items">
+                            <a href="mailto:maliktehreem64@gmail.com" class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p>Email</p>
+                                    <p>maliktehreem64@gmail.com</p>
+                                </div>
+                            </a>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p>Location</p>
+                                    <p>Karachi, Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="mailto:maliktehreem64@gmail.com" class="social-link" aria-label="Email"><i data-lucide="mail"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span id="btnText">Send Message</span>
+                            <i data-lucide="send" id="btnIcon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <h3 class="footer-title">Tehreem Malik</h3>
+            <p class="footer-subtitle">Aspiring Software Developer | Web Enthusiast | AI Explorer</p>
+            <div class="footer-social">
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tehreem-malik-346bb7364" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:maliktehreem64@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">
+                © 2024 Tehreem Malik. Designed with 
+                <i data-lucide="heart"></i>
+                and passion.
+            </p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" title="Back to top" data-tooltip="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="T.js"></script>
+</body>
+</html>

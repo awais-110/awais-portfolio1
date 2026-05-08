@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Awais | Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 8%;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h2{
+    color:#38bdf8;
+}
+
+nav a{
+    color:#fff;
+    margin-left:20px;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:100vh;
+    padding:0 8%;
+}
+
+.hero-text{
+    max-width:600px;
+    animation:fadeUp 1s ease;
+}
+
+.hero-text h1{
+    font-size:48px;
+}
+
+.hero-text span{
+    color:#38bdf8;
+}
+
+.hero-text p{
+    margin:20px 0;
+    opacity:0.8;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#38bdf8;
+    color:#000;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    margin-right:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* IMAGE */
+.hero img{
+    width:350px;
+    border-radius:20px;
+    animation:float 4s ease-in-out infinite;
+}
+
+/* SECTION */
+section{
+    padding:80px 8%;
+}
+
+/* PROJECT TREE */
+.tree ul{
+    padding-top:20px;
+    position:relative;
+}
+
+.tree li{
+    list-style:none;
+    text-align:center;
+    margin:20px;
+    position:relative;
+}
+
+.tree li::before{
+    content:'';
+    position:absolute;
+    top:-20px;
+    left:50%;
+    border-left:2px solid #38bdf8;
+    height:20px;
+}
+
+.tree li div{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:20px;
+    background:#1e293b;
+    transition:0.3s;
+}
+
+.tree li div:hover{
+    background:#38bdf8;
+    color:#000;
+    transform:scale(1.05);
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero img{
+        margin-top:20px;
+        width:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h2>Awais.dev</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Muhammad Awais</span></h1>
+        <p>Aspiring Web Developer & AI Enthusiast passionate about building real-world applications.</p>
+        <button class="btn">Hire Me</button>
+        <button class="btn">View Projects</button>
+    </div>
+
+    <img src="IMG-20240603-WA0007-removebg-preview.png" alt="profile">
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a Computer Science student at Iqra University with a strong interest in web development and AI.
+        I enjoy building projects and learning modern technologies.
+    </p>
+</section>
+
+<!-- PROJECT TREE -->
+<section id="projects">
+    <h2>My Projects 🌳</h2>
+
+    <div class="tree">
+        <ul>
+            <li>
+                <div>My Projects</div>
+                <ul>
+                    <li>
+                        <div>Web Projects</div>
+                        <ul>
+                            <li><div>Portfolio Website</div></li>
+                            <li><div>E-commerce Website</div></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Python Projects</div>
+                        <ul>
+                            <li><div>AI Chatbot</div></li>
+                            <li><div>Automation Scripts</div></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Academic Projects</div>
+                        <ul>
+                            <li><div>Smart Traffic System</div></li>
+                            <li><div>Hybrid Social Network</div></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>📍 Karachi, Pakistan</p>
+    <p>📧 awaiss.dev@gmail.com</p>
+    <p>📞 +92 307 9838110</p>
+    <p>🔗 linkedin.com/in/muhammad-awais-0287743a9</p>
+</section>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a').forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({behavior:'smooth'});
+    });
+});
+</script>
+
+</body>
+</html>
